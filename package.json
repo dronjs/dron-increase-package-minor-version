@@ -1,6 +1,6 @@
 {
   "name": "dron-increase-package-minor-version",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "Increases package minor version and makes a commit",
   "main": "index.js",
   "scripts": {

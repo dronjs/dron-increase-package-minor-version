@@ -1,10 +1,11 @@
 var fs = require('fs');
 
 function increaseMinorVersion() {
-  var packageJson = this.touch('package.json').require();
-  packageJson.version = packageJson.version.split('.').map(function(v, index) { return index===1 ? parseInt(v)+1 : (index===2 ? 0 : v); }).join('.');
-  fs.writeFileSync(require.resolve('./package.json'), JSON.stringify(packageJson, null, 2), 'utf-8');
-  return packageJson;
+  var package = this.touch('package.json');
+  var json = package.require();
+  json.version = json.version.split('.').map(function(v, index) { return index===1 ? parseInt(v)+1 : (index===2 ? 0 : v); }).join('.');
+  package.write(JSON.stringify(json, null, 2));
+  return json;
 }
 
 module.exports = function increaseMinorVersionFactoy() {
