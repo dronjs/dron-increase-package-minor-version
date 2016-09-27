@@ -1,0 +1,19 @@
+{
+  "name": "dron-increase-package-minor-version",
+  "version": "0.0.1",
+  "description": "Increases package minor version and makes a commit",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "dron",
+    "module"
+  ],
+  "author": "Vladimir Kalmykov <vladimirmorulus@gmail.com>",
+  "license": "MIT",
+  "dron": {
+    "version": ">=0.0.1",
+    "cli-version": ">=0.0.3"
+  }
+}
